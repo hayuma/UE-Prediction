@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>UE</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="ca">
+	<h1>UE prediction System </h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Test one" placeholder="Test one Marks" required="required" />
+        <input type="text" name="Test two" placeholder="Test two Marks" required="required" />
+		<input type="text" name="Assignment one " placeholder="Assignment one Marks" required="required" />
+        <input type="text" name="Assignment two" placeholder="Assignment two Marks" required="required" />
+    <input type="text" name="Group work" placeholder="group work marks" required="required" />
+
+        <button type="submit" >Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
